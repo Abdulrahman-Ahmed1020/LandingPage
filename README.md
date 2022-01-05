@@ -41,6 +41,6 @@ I coded in `../css/styles.css`. I select html and make scroll-behavior : "smooth
 
 [classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
-[scrollTo](https://developer.mozilla.org/en-US/search?q=scrollTo)
+[scrollTo](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo)
 
-[innerHeight](https://developer.mozilla.org/en-US/search?q=innerHeight)
+[innerHeight](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight)

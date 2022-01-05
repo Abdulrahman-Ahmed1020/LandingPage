@@ -2,12 +2,13 @@
 
 ## Table of Contents
 
--  [TheNavBar](#TheNavBar)
--  [ActiveClass](#activeClass)
--  [navClass](#navClass)
--  [TheButtonToTop](#TheButtonToTop)
--  [TheButtonToAddNewSection](#TheButtonToAddNewSection)
--  [CSS](#CSS)
+- [TheNavBar](#TheNavBar)
+- [ActiveClass](#activeClass)
+- [navClass](#navClass)
+- [TheButtonToTop](#TheButtonToTop)
+- [TheButtonToAddNewSection](#TheButtonToAddNewSection)
+- [CSS](#CSS)
+- [Reference](#Reference)
 
 ## TheNavBar
 
@@ -33,3 +34,13 @@ and update the navbar with udpatenav function
 ## CSS
 
 I coded in `../css/styles.css`. I select html and make scroll-behavior : "smooth" to make scroll awesome.And Change the content and style.
+
+## Reference
+
+[getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+
+[classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+
+[scrollTo](https://developer.mozilla.org/en-US/search?q=scrollTo)
+
+[innerHeight](https://developer.mozilla.org/en-US/search?q=innerHeight)

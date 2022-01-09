@@ -44,3 +44,9 @@ I coded in `../css/styles.css`. I select html and make scroll-behavior : "smooth
 [scrollTo](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo)
 
 [innerHeight](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight)
+
+[createTextNode](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
+
+[datgaSet](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)
+
+[offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop)

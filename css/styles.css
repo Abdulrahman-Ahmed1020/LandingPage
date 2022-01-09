@@ -242,6 +242,7 @@ section.your-active-class .landing__container::after {
   bottom: 30px;
   right: 20px;
   display: none;
+  cursor: pointer;
 }
 /* this for the button to create section */
 button.createSection {

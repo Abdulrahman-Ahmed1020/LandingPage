@@ -12,20 +12,50 @@ let counter = 5;
 // this function to add the items to navbar
 function addItems() {
   // this loop for repeat the code inside this loop for each section
-  for (let i = 0; i < allSections.length; i++) {
-    //this variable is used to store the value of section id attribute
-    const sectionId = allSections[i].getAttribute('id');
+  for (section of allSections) {
     // this vaiable is used to store the value of section data-nav attribute
-    const sectionName = allSections[i].getAttribute('data-nav');
+    const sectionName = section.getAttribute('data-nav');
 
-    /*here i used appendChild to create li element inside ul element.
-    * i used innerHTML to write (a) element with href to when i clicked it,
-       the page scroll to the section with id equal the value of the (a) element href attribute
-    * and class = menu__link to give him the css
-    */
-    ulNav.appendChild(document.createElement('li')).innerHTML = `<a class="menu__link" href="#${sectionId}">${sectionName}</a>`
+    // create li 
+    let createLi = document.createElement('li');
+    // create a
+    let createA = document.createElement('a');
+    // set class to a element 
+    createA.className = 'menu__link';
+    // create text by section name 
+    let textA = document.createTextNode(`${sectionName}`);
+    // add the text to (a) element
+    createA.appendChild(textA);
+    // add the (a) element to li element 
+    createLi.appendChild(createA);
+    // li to navbar
+    ulNav.appendChild(createLi);
   }
 }
+
+// this function for when i clicked on item the window scroll to the section with data-nav attribute = the text in (a)element
+function scrollItem() {
+  let allItmes = document.querySelectorAll('.menu__link');
+  // this is loop for repeat some operation
+  for (section of allSections) {
+    // this varible to store value of data-nav attribute
+    let sectionHeading = section.dataset.nav;
+    // this function to add event to every item in navbar 
+    for (item of allItmes) {
+      // this is The event 
+      item.addEventListener('click', () => {
+        // this varible to store the item content 
+        let itemText = item.innerText;
+        // this condition of cheek if the data-nav section equal item content 
+        if (sectionHeading == itemText) {
+          // if this is true the page is scroll to the section 
+          scrollTo(0, section.offsetTop);
+        }
+      })
+    }
+  }
+}
+
 
 // this function to see if the section is in the viewport or not and also add or remove (your active class) class
 function addActiveClass() {
@@ -86,7 +116,7 @@ function toShowTheButton() {
 */
 function setAttributes(el, attrs) {
   // this loop for to set every attribute in the second argument to the el 
-  for (let key in attrs) {
+  for (key in attrs) {
     el.setAttribute(key, attrs[key]);
   }
 }
@@ -151,6 +181,8 @@ function smooth() {
 smooth();
 // I callback the addItems function to add items to navbar
 addItems();
+// I callback the scrollItem function to scroll to section after clicking on item 
+scrollItem();
 //when i scroll this Event will run the addActiveClass function for add or remove (your-active-class) class for section
 addEventListener('scroll', addActiveClass);
 //when i scroll this event will run the toTop function
